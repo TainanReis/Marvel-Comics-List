@@ -1,0 +1,20 @@
+<ion-grid>
+<ion-row justify-content-center>
+  <ion-col align-self-center size-xl="2" size-lg="4" size-md="6">
+    <div text-center>
+      <h4>Login</h4>
+    </div>
+    <div padding>
+      <ion-item>
+        <ion-input id="email" #email type="email" required (ngModel)="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input id="password" #password type="password" required (ngModel)="password"></ion-input>
+      </ion-item>
+    </div>
+    <div padding>
+      <ion-button id="submitBtn" size="large" href="#" expand="block" (click)="confirmUser(email.value, password.value)">Login</ion-button>
+    </div>
+  </ion-col>
+</ion-row>
+</ion-grid>
