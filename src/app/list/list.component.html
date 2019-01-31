@@ -1,3 +1,13 @@
-<p>
-  list works!
-</p>
+
+<ion-list class="listItems">
+  <ion-item *ngFor="let item of messages">
+    <ion-thumbnail>
+      <img src="{{item.thumbnail.path}}.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>{{item.title}}</h2>
+      <p>{{item.description}}</p>
+    </ion-label>
+    <ion-icon name="add" alt="add to collection" (click)="addToCollection(item.title, item.description, item.thumbnail.path)"></ion-icon>
+  </ion-item>
+</ion-list>

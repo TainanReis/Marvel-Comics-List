@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
     })
   }
   confirmUser(email, password){
-    // o ideal seria fazer a confirmação no servidor obtendo apenas a resposta
+    // it would be ideal to confirm at the server and get the answer
     let loginConfirmation = new Promise((resolve, reject) => {
       const apiUrl = 'https://5c4fc3efee97f60014047fee.mockapi.io/users';
       const request = new XMLHttpRequest();
