@@ -1,5 +1,5 @@
 # Marvel-Comics-List
-A small project using Ionic (Angular + Typescript) + Javascript.
+A small project using `Ionic (Angular + Typescript) + Javascript`.
 It shows a list of 100 Marvel comics.
 
 ## How to test it?
