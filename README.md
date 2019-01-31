@@ -3,7 +3,7 @@ A small project using `Ionic (Angular + Typescript) + Javascript`.
 It shows a list of 100 Marvel comics.
 
 ## How to test it?
-- After downloading this project and it's dependencies, run `ionic.serve`
+- After downloading this project and it's dependencies, run `ionic serve`
 - You can also test it on mobile devices using *Ionic DevApp*
 - To Login, use this data:
   - `email@email.com`
