@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
           if (entry.password === password){
             localStorage.setItem('state', 'logged in');
             console.log('connected');
+            location.reload(true);
           } else {
             console.log('wrong password');
           }

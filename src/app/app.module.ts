@@ -11,11 +11,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ListComponent } from './list/list.component';
 import { LoginComponent } from './login/login.component';
+var pageToOpen = localStorage.getItem('state') ? AppComponent : LoginComponent;
 
 @NgModule({
-  declarations: [ AppComponent, ListComponent, LoginComponent ],
+  declarations: [ AppComponent,  LoginComponent],
   entryComponents: [],
   imports: [ BrowserModule, IonicModule.forRoot(), AppRoutingModule, FormsModule, HttpClientModule ],
   providers: [
@@ -23,6 +23,6 @@ import { LoginComponent } from './login/login.component';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
-  bootstrap: [ LoginComponent ]
+  bootstrap: [ pageToOpen ]
 })
 export class AppModule {}
