@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -18,16 +19,17 @@ export class LoginComponent implements OnInit {
   }
   confirmUser(email, password){
     // it would be ideal to confirm at the server and get the answer
-    let loginConfirmation = new Promise((resolve, reject) => {
-      const apiUrl = 'https://5c4fc3efee97f60014047fee.mockapi.io/users';
-      const request = new XMLHttpRequest();
-      request.open('GET', apiUrl);
-      request.responseType = 'json';
-      request.onload = () => {
-        resolve(loginParser(request.response, email, password));
-      };
-      request.send();
-    });
+    let apiUrl = 'https://5c4fc3efee97f60014047fee.mockapi.io/users';
+    let request = new XMLHttpRequest();
+    request.open('GET', apiUrl);
+    request.responseType = 'json';
+    request.send();
+
+    request.onload = function (){
+      loginParser(request.response, email, password)
+    };
+
+    /* **************************** */
     function loginParser(response, email, password){
       response.map((entry) => {
         if (entry.email === email){
