@@ -28,8 +28,8 @@ The object parsed by the API is:
 - [ ] Learn more about Ionic and make a design that pops!
 
 # Observation
-It was my first contact with this framework. It was also the first time I developed using the Angular Framework and Typescript.
-There's a lot to know about TypeScript. I order to have some work to show, I added `"allowJs": true,` to *tsconfig.json* so I could use javascript code.
+It's the first time I'm using this framework. It was also the first time I developed using the Angular Framework and Typescript.
+There's a lot to know about both. I order to have some work to show, I added `"allowJs": true,` to *tsconfig.json* so I could use javascript code.
 
 So far, **I learned a lot about Angular Framework and how the routing and dependencies work**. I also learned how useful is the Ionic Framework. Both, together, make the developing life much easier!
 
