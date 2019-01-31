@@ -1,6 +1,6 @@
 # Marvel-Comics-List
 A small project using `Ionic (Angular + Typescript) + Javascript`.
-It shows a list of 100 Marvel comics.
+This app gets a list of Marvel comics using their API and show them to the user. The user can see more information about the items and add them to a collection. This collection will be stored in the Cloud. In order to open the app, a login is required. For simplicity sake, at this moment, it's using the MockAPI to get the user data.
 
 ## How to test it?
 - After downloading this project and it's dependencies, run `ionic serve`
@@ -25,6 +25,7 @@ The object parsed by the API is:
 - [ ] Implement item search
 - [ ] Add/remove items to/from a personal collection
 - [ ] Show the personal collection
+- [ ] Store the user collection in the Cloud
 - [ ] Learn more about Ionic and make a design that pops!
 
 # Observation
