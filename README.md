@@ -2,6 +2,7 @@
 A small project using Ionic (Angular + Typescript)
 
 login: email@email.com
+
 password: password1
 
 The object parsed by the API is:
