@@ -21,10 +21,11 @@ The object parsed by the API is:
 # Objectives
 - [x] Login/Logout
 - [X] Get data from marvel API and show it
-- [ ] Implement pagination
+- [X] Implement pagination
 - [ ] Implement item search
 - [ ] Add/remove items to/from a personal collection
 - [ ] Show the personal collection
+- [ ] Implement user registation
 - [ ] Store the user collection in the Cloud
 - [ ] Learn more about Ionic and make a design that pops!
 
@@ -33,4 +34,3 @@ It's the first time I'm using this framework. It's also the first time I'm devel
 There's a lot to know about both. In order to have some work to show, I added `"allowJs": true,` to *tsconfig.json* so I could use javascript code.
 
 So far, **I learned a lot about Angular Framework and how the routing and dependencies work**. I also learned how useful is the Ionic Framework. Both, together, make the developing life much easier!
-

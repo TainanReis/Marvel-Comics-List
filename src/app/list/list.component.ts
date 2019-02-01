@@ -8,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
 export class ListComponent implements OnInit {
 
     messages = [];
+    resultsPerPage = 19;
 
   constructor() { }
 
   ngOnInit() {
+    if (!window.indexedDB) {
+      window.alert("Your browser doesn't support a stable version of IndexedDB.");
+    }
     let listArray = {
       entry: []
     };
@@ -33,9 +37,14 @@ export class ListComponent implements OnInit {
     };
     this.messages = listArray.entry;
   }
+  increaseResults(){
+    this.resultsPerPage += 19;
+  }
+  decreaseResults(){
+    this.resultsPerPage -= 19;
+  }
   addToCollection(title, description, thumbnail) {
-    // missing this implementation
-    //let collectionList = localStorage.getItem('collection') + title + description + thumbnail;
-    //localStorage.setItem('collection', );
+    // yet to implement
+    
   }
 }

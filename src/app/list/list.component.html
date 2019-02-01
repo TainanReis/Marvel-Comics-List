@@ -1,13 +1,25 @@
 
 <ion-list class="listItems">
-  <ion-item *ngFor="let item of messages">
-    <ion-thumbnail>
-      <img src="{{item.thumbnail.path}}.jpg">
-    </ion-thumbnail>
-    <ion-label>
-      <h2>{{item.title}}</h2>
-      <p>{{item.description}}</p>
-    </ion-label>
-    <ion-icon name="add" alt="add to collection" (click)="addToCollection(item.title, item.description, item.thumbnail.path)"></ion-icon>
-  </ion-item>
+  <div *ngFor="let item of messages; let i=index">
+    <ion-item *ngIf="i>=(resultsPerPage-19) && i<=(resultsPerPage)">
+      <ion-thumbnail>
+        <img src="{{item.thumbnail.path}}.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+      </ion-label>
+      <ion-icon name="add" alt="add to collection" (click)="addToCollection(item.title, item.description, item.thumbnail.path)"></ion-icon>
+    </ion-item>
+  </div>
+  <div id=buttons>
+  <ion-button color="primary" (click)="decreaseResults()" *ngIf="resultsPerPage>19" expand>
+    <ion-icon name="arrow-back"></ion-icon>
+    Back
+  </ion-button>
+  <ion-button color="primary" (click)="increaseResults()" *ngIf="resultsPerPage<100" expand>
+    Next
+    <ion-icon name="arrow-forward"></ion-icon>
+  </ion-button>
+  </div>
 </ion-list>
